@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Component.m
 //  AppContainer
 //
 //  Created by Urvashi Gupta on 13/04/15.
 //  Copyright (c) 2015 Urvashi Gupta. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SPRComponent.h"
 
-@interface ViewController : UIViewController
-
+@implementation SPRComponent
 
 @end
-
