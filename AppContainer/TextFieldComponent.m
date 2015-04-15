@@ -10,19 +10,23 @@
 
 @interface TextFieldComponent()
 @property NSDictionary* dataDictionary;
+@property UITextField* textField;
 @end
 
 @implementation TextFieldComponent
 
+#pragma mark - 
 + (TextFieldComponent *)createComponentWithData:(NSDictionary *)dictionary {
     return [TextFieldComponent new];
 }
 
-+ (UIView *)renderViewForComponent:(SPRComponent *)component {
-//    UIView *mainView = [UIView new];
-    UITextField *textField = [UITextField new];
-//    [mainView addSubview:textField];
-    return textField;
+- (UIView *)renderView {
+    self.textField = [UITextField new];
+    return self.textField;
+}
+
+- (void)applyData {
+    self.textField.placeholder = self.placeholder;
 }
 
 #pragma mark - NSCopying

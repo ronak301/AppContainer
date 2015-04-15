@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Urvashi Gupta. All rights reserved.
 //
 
-#import "FieldComponent.h"
-#import "Mapper.h"
-@interface LabelFieldComponent : FieldComponent<Mapper> 
+#import "InputFieldComponent.h"
+#import "PropertyMapper.h"
+@interface LabelFieldComponent : InputFieldComponent 
     
 @property (nonatomic) NSString* labelName;
 

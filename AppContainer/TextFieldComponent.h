@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Urvashi Gupta. All rights reserved.
 //
 
-#import "FieldComponent.h"
+#import "InputFieldComponent.h"
 
-@interface TextFieldComponent : FieldComponent
+@interface TextFieldComponent : InputFieldComponent
 
 @property (nonatomic) NSString* placeholderText;
 @property (nonatomic) NSString* dataType;

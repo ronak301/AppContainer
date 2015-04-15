@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Urvashi Gupta. All rights reserved.
 //
 
-#import "FieldComponent.h"
+#import "InputFieldComponent.h"
 
-@interface ButtonFieldComponent : FieldComponent
+@interface ButtonFieldComponent : InputFieldComponent
 
 @property (nonatomic) NSString* buttonName;
 

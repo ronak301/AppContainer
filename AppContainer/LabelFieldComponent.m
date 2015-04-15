@@ -20,12 +20,10 @@
 
 static NSDictionary* propertyMapper = nil;
 
+#pragma mark - SPRComponentProtocol
+
 + (LabelFieldComponent *)createComponentWithData:(NSDictionary *)dictionary {
     return [LabelFieldComponent new];
-}
-
-+ (NSDictionary *)getPropertyMapper {
-    return propertyMapper;
 }
 
 - (UIView *)renderView {
@@ -36,6 +34,7 @@ static NSDictionary* propertyMapper = nil;
 - (void)applyData {
     self.nameLabel.text = self.labelName;
 }
+
 
 #pragma mark - Style Methods
 
@@ -54,17 +53,24 @@ static NSDictionary* propertyMapper = nil;
     return invocations;
 }
 
-#pragma mark - Mapper
+#pragma mark - PropertyMapper Protocol Method
 
-- (NSString *)getPropertyNameForTag:(NSString *)tag {
++ (NSDictionary *)getPropertyMapper {
+    if (propertyMapper == nil) {
+        [self createPropertyMapper];
+    }
+    return propertyMapper;
+}
+
++ (NSString *)getPropertyNameForTag:(NSString *)tag {
     if (propertyMapper == nil) {
         [self createPropertyMapper];
     }
     return [propertyMapper valueForKey:tag];
 }
 
-- (void)createPropertyMapper {
-    NSMutableDictionary *dictionary = [[FieldComponent getPropertyMapper] mutableCopy];
++ (void)createPropertyMapper {
+    NSMutableDictionary *dictionary = [[InputFieldComponent getPropertyMapper] mutableCopy];
     [dictionary setObject:@"LabelName" forKey:@"labelName"];
     propertyMapper = dictionary;
 }

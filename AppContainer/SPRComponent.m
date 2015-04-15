@@ -7,14 +7,10 @@
 //
 
 #import "SPRComponent.h"
-#import "FieldComponent.h"
+#import "InputFieldComponent.h"
 
 @implementation SPRComponent
 
-- (NSString *)getPropertyNameForTag:(NSString *)tag {
-//Override in subclass
-    return nil;
-}
 
 #pragma mark - SPRComponentProtocol
 
@@ -37,10 +33,23 @@
     //Override
 }
 
+#pragma mark - PropertyMapper Protocol
+
++ (NSString *)getPropertyNameForTag:(NSString *)tag {
+    //Override in subclass
+    return nil;
+}
+
++ (NSDictionary *)getPropertyMapper {
+    //Override in subclass
+    return nil;
+}
+
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
     return [[[self class] alloc] init];
 }
+
 
 @end

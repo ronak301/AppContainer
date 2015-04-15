@@ -15,12 +15,15 @@
 		4F9AA9541ADC34E5004438EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F9AA9521ADC34E5004438EC /* LaunchScreen.xib */; };
 		4F9AA9601ADC34E5004438EC /* AppContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA95F1ADC34E5004438EC /* AppContainerTests.m */; };
 		4F9AA96E1ADC3742004438EC /* SPRComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA96D1ADC3742004438EC /* SPRComponent.m */; };
-		4F9AA9711ADC3914004438EC /* FieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9701ADC3914004438EC /* FieldComponent.m */; };
+		4F9AA9711ADC3914004438EC /* InputFieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9701ADC3914004438EC /* InputFieldComponent.m */; };
 		4F9AA9751ADC422D004438EC /* TextFieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9741ADC422D004438EC /* TextFieldComponent.m */; };
 		4F9AA9781ADC425D004438EC /* LabelFieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9771ADC425D004438EC /* LabelFieldComponent.m */; };
 		4F9AA97B1ADC427C004438EC /* ButtonFieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA97A1ADC427C004438EC /* ButtonFieldComponent.m */; };
 		4F9AA97E1ADC4AED004438EC /* XMLMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA97D1ADC4AED004438EC /* XMLMapper.m */; };
 		4F9AA9811ADC50A8004438EC /* SPRFormBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9801ADC50A8004438EC /* SPRFormBuilder.m */; };
+		4FEA93E01ADE8AF4000694F3 /* DisplayFieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93DF1ADE8AF4000694F3 /* DisplayFieldComponent.m */; };
+		4FEA93E31ADE8B1E000694F3 /* FieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */; };
+		4FEA93E61ADE950D000694F3 /* FieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93E51ADE950D000694F3 /* FieldView.m */; };
 		5959EE6E785F6BCF02FF8AB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C3763214EF424A0BD9588C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +41,7 @@
 		24C3763214EF424A0BD9588C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E4659092B82FDF263E6621 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3D759B72157F0A8DC038497C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		4F39E9471ADD8ADF00F8136E /* Mapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mapper.h; sourceTree = "<group>"; };
+		4F39E9471ADD8ADF00F8136E /* PropertyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyMapper.h; sourceTree = "<group>"; };
 		4F9AA9401ADC34E5004438EC /* AppContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9AA9441ADC34E5004438EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F9AA9451ADC34E5004438EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,8 +57,8 @@
 		4F9AA95F1ADC34E5004438EC /* AppContainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppContainerTests.m; sourceTree = "<group>"; };
 		4F9AA96C1ADC3742004438EC /* SPRComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPRComponent.h; sourceTree = "<group>"; };
 		4F9AA96D1ADC3742004438EC /* SPRComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPRComponent.m; sourceTree = "<group>"; };
-		4F9AA96F1ADC3914004438EC /* FieldComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldComponent.h; sourceTree = "<group>"; };
-		4F9AA9701ADC3914004438EC /* FieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldComponent.m; sourceTree = "<group>"; };
+		4F9AA96F1ADC3914004438EC /* InputFieldComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputFieldComponent.h; sourceTree = "<group>"; };
+		4F9AA9701ADC3914004438EC /* InputFieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputFieldComponent.m; sourceTree = "<group>"; };
 		4F9AA9721ADC3B48004438EC /* SPRComponentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPRComponentProtocol.h; sourceTree = "<group>"; };
 		4F9AA9731ADC422D004438EC /* TextFieldComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldComponent.h; sourceTree = "<group>"; };
 		4F9AA9741ADC422D004438EC /* TextFieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldComponent.m; sourceTree = "<group>"; };
@@ -67,6 +70,12 @@
 		4F9AA97D1ADC4AED004438EC /* XMLMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLMapper.m; sourceTree = "<group>"; };
 		4F9AA97F1ADC50A8004438EC /* SPRFormBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPRFormBuilder.h; sourceTree = "<group>"; };
 		4F9AA9801ADC50A8004438EC /* SPRFormBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPRFormBuilder.m; sourceTree = "<group>"; };
+		4FEA93DE1ADE8AF4000694F3 /* DisplayFieldComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayFieldComponent.h; sourceTree = "<group>"; };
+		4FEA93DF1ADE8AF4000694F3 /* DisplayFieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayFieldComponent.m; sourceTree = "<group>"; };
+		4FEA93E11ADE8B1E000694F3 /* FieldComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldComponent.h; sourceTree = "<group>"; };
+		4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldComponent.m; sourceTree = "<group>"; };
+		4FEA93E41ADE950D000694F3 /* FieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldView.h; sourceTree = "<group>"; };
+		4FEA93E51ADE950D000694F3 /* FieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +130,14 @@
 				4F9AA9431ADC34E5004438EC /* Supporting Files */,
 				4F9AA96C1ADC3742004438EC /* SPRComponent.h */,
 				4F9AA96D1ADC3742004438EC /* SPRComponent.m */,
-				4F9AA96F1ADC3914004438EC /* FieldComponent.h */,
-				4F9AA9701ADC3914004438EC /* FieldComponent.m */,
+				4FEA93E11ADE8B1E000694F3 /* FieldComponent.h */,
+				4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */,
+				4FEA93E41ADE950D000694F3 /* FieldView.h */,
+				4FEA93E51ADE950D000694F3 /* FieldView.m */,
+				4F9AA96F1ADC3914004438EC /* InputFieldComponent.h */,
+				4F9AA9701ADC3914004438EC /* InputFieldComponent.m */,
+				4FEA93DE1ADE8AF4000694F3 /* DisplayFieldComponent.h */,
+				4FEA93DF1ADE8AF4000694F3 /* DisplayFieldComponent.m */,
 				4F9AA9731ADC422D004438EC /* TextFieldComponent.h */,
 				4F9AA9741ADC422D004438EC /* TextFieldComponent.m */,
 				4F9AA9761ADC425D004438EC /* LabelFieldComponent.h */,
@@ -134,7 +149,7 @@
 				4F9AA97F1ADC50A8004438EC /* SPRFormBuilder.h */,
 				4F9AA9801ADC50A8004438EC /* SPRFormBuilder.m */,
 				4F9AA9721ADC3B48004438EC /* SPRComponentProtocol.h */,
-				4F39E9471ADD8ADF00F8136E /* Mapper.h */,
+				4F39E9471ADD8ADF00F8136E /* PropertyMapper.h */,
 			);
 			path = AppContainer;
 			sourceTree = "<group>";
@@ -319,8 +334,11 @@
 			files = (
 				4F9AA97B1ADC427C004438EC /* ButtonFieldComponent.m in Sources */,
 				4F9AA9751ADC422D004438EC /* TextFieldComponent.m in Sources */,
+				4FEA93E31ADE8B1E000694F3 /* FieldComponent.m in Sources */,
+				4FEA93E61ADE950D000694F3 /* FieldView.m in Sources */,
+				4FEA93E01ADE8AF4000694F3 /* DisplayFieldComponent.m in Sources */,
 				4F9AA96E1ADC3742004438EC /* SPRComponent.m in Sources */,
-				4F9AA9711ADC3914004438EC /* FieldComponent.m in Sources */,
+				4F9AA9711ADC3914004438EC /* InputFieldComponent.m in Sources */,
 				4F9AA94C1ADC34E5004438EC /* ViewController.m in Sources */,
 				4F9AA9491ADC34E5004438EC /* AppDelegate.m in Sources */,
 				4F9AA9461ADC34E5004438EC /* main.m in Sources */,

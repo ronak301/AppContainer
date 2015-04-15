@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol Mapper <NSObject>
+@protocol PropertyMapper <NSObject>
 
-- (NSString *)getPropertyNameForTag:(NSString *)tag;
++ (NSDictionary *)getPropertyMapper;
++ (NSString *)getPropertyNameForTag:(NSString *)tag;
 
 @end
