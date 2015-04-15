@@ -10,6 +10,7 @@
 #import "ButtonFieldComponent.h"
 #import "LabelFieldComponent.h"
 #import "TextFieldComponent.h"
+#import "DatePickerComponent.h"
 
 @interface XMLMapper()
 @end
@@ -21,9 +22,11 @@ static  NSDictionary* dictionary;
 
 + (void)initialize {
     NSMutableDictionary* mutableDictionary = [NSMutableDictionary new];
-    [mutableDictionary setValue:[TextFieldComponent new] forKey:@"textField"];
-    [mutableDictionary setValue:[LabelFieldComponent new] forKey:@"labelField"];
-    [mutableDictionary setValue:[ButtonFieldComponent new] forKey:@"buttonField"];
+    [mutableDictionary setValue:[TextFieldComponent new] forKey:@"text"];
+    [mutableDictionary setValue:[TextFieldComponent new] forKey:@"number"];
+    [mutableDictionary setValue:[LabelFieldComponent new] forKey:@"label"];
+    [mutableDictionary setValue:[ButtonFieldComponent new] forKey:@"button"];
+    [mutableDictionary setValue:[DatePickerComponent new] forKey:@"datePicker"];
     dictionary = mutableDictionary;
 }
 

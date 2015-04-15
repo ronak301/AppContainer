@@ -24,6 +24,7 @@
 		4FEA93E01ADE8AF4000694F3 /* DisplayFieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93DF1ADE8AF4000694F3 /* DisplayFieldComponent.m */; };
 		4FEA93E31ADE8B1E000694F3 /* FieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */; };
 		4FEA93E61ADE950D000694F3 /* FieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93E51ADE950D000694F3 /* FieldView.m */; };
+		4FEA93EF1ADEB11F000694F3 /* DatePickerComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93EE1ADEB11F000694F3 /* DatePickerComponent.m */; };
 		5959EE6E785F6BCF02FF8AB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C3763214EF424A0BD9588C /* libPods.a */; };
 		BDBCE3951ADEB0B700D7ECF7 /* JsonToObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		4FEA93E51ADE950D000694F3 /* FieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldView.m; sourceTree = "<group>"; };
 		BDBCE3931ADEB0B700D7ECF7 /* JsonToObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonToObjectMapper.h; sourceTree = "<group>"; };
 		BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonToObjectMapper.m; sourceTree = "<group>"; };
+		4FEA93ED1ADEB11F000694F3 /* DatePickerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerComponent.h; sourceTree = "<group>"; };
+		4FEA93EE1ADEB11F000694F3 /* DatePickerComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerComponent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				4F9AA9701ADC3914004438EC /* InputFieldComponent.m */,
 				4FEA93DE1ADE8AF4000694F3 /* DisplayFieldComponent.h */,
 				4FEA93DF1ADE8AF4000694F3 /* DisplayFieldComponent.m */,
+				4FEA93ED1ADEB11F000694F3 /* DatePickerComponent.h */,
+				4FEA93EE1ADEB11F000694F3 /* DatePickerComponent.m */,
 				4F9AA9731ADC422D004438EC /* TextFieldComponent.h */,
 				4F9AA9741ADC422D004438EC /* TextFieldComponent.m */,
 				4F9AA9761ADC425D004438EC /* LabelFieldComponent.h */,
@@ -347,6 +352,7 @@
 				4F9AA94C1ADC34E5004438EC /* ViewController.m in Sources */,
 				BDBCE3951ADEB0B700D7ECF7 /* JsonToObjectMapper.m in Sources */,
 				4F9AA9491ADC34E5004438EC /* AppDelegate.m in Sources */,
+				4FEA93EF1ADEB11F000694F3 /* DatePickerComponent.m in Sources */,
 				4F9AA9461ADC34E5004438EC /* main.m in Sources */,
 				4F9AA9781ADC425D004438EC /* LabelFieldComponent.m in Sources */,
 				4F9AA97E1ADC4AED004438EC /* XMLMapper.m in Sources */,
