@@ -9,6 +9,8 @@
 #import "SPRComponent.h"
 #import "LabelFieldComponent.h"
 
+@protocol FieldComponent;
+
 @interface FieldComponent : SPRComponent
 
 @property (nonatomic) NSNumber* fieldId;

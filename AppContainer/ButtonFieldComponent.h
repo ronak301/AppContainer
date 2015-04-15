@@ -7,9 +7,11 @@
 //
 
 #import "InputFieldComponent.h"
+#import "SubViewComponent.h"
 
-@interface ButtonFieldComponent : InputFieldComponent
+@interface ButtonFieldComponent : SubViewComponent
 
-@property (nonatomic) NSString* buttonName;
+@property (nonatomic) NSNumber* buttonId;
+@property (nonatomic) NSString* label;
 
 @end

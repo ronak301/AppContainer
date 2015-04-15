@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <JSONModel/JSONModel.h>
 #import "FieldComponent.h"
+#import "ViewComponent.h"
 
 @interface JsonToObjectMapper : NSObject
 
-+ (NSArray *)getFieldsFromJsonString:(NSString *)string;
++ (NSArray *)getFormFieldsFromJsonString:(NSString *)string;
++ (NSDictionary *)getSubViewsFromJsonString:(NSString *)string;
++ (ViewComponent *)getViewFromJsonString:(NSString *)string;
 @end

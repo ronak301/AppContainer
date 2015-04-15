@@ -9,7 +9,7 @@
 #import "ButtonFieldComponent.h"
 
 @interface ButtonFieldComponent()
-@property NSDictionary* dataDictionary;
+@property UIButton *button;
 @end
 
 @implementation ButtonFieldComponent
@@ -18,12 +18,16 @@
     return [ButtonFieldComponent new];
 }
 
-+ (UIView *)renderViewForComponent:(SPRComponent *)component {
+- (UIView *)renderViewForComponent {
     UIView *mainView = [UIView new];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [mainView addSubview:button];
-    return button;
+    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [mainView addSubview:self.button];
+    return self.button;
+}
+
+- (void)applyData {
+    self.button.titleLabel.text = self.label;
 }
 
 - (void)buttonTapped:(id) sender {

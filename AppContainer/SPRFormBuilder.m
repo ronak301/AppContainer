@@ -17,11 +17,8 @@
 #import "LabelFieldComponent.h"
 #import "FieldView.h"
 #import "JsonToObjectMapper.h"
+#import "FormView.h"
 
-typedef enum  {
-    VERTICAL = 1,
-    HORIZONTAL
-} LayoutType ;
 
 @implementation SPRFormBuilder
 
@@ -32,19 +29,19 @@ typedef enum  {
     return nil;
 }
 
-- (UIView *)buildFormUsingData:(NSDictionary *)formData {
+- (UIView *)buildComponentViewUsingData:(NSString *)formData withLayoutType:(LayoutType)layoutType {
     
     NSDictionary *dictionary = @{@"UIView":@{@"layoutType": @"", @"style":@"", @"components": @[@{@"type": @"labelField", @"labelName": @"This is a label"}, @{@"type": @"labelField", @"labelName": @"This is a label again"}]}};
     
-    UIView *formView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, CGFLOAT_MAX)];
+//    FormView *formView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, CGFLOAT_MAX)];
+    FormView *formView = [[FormView alloc] initWithLayoutType:VERTICAL];
     //Read & store type of layout
-    LayoutType type = VERTICAL;
     
     //Read & create style dictionary
     //Map the dictionary
     NSDictionary* containerStyleDictionary = @{ @"systemFontOfSize" : @"17.0", @"setBackgroundColor" : @"gray", @"setTextColor" : @"black", @"alpha" : @"1.0"};
 //    NSArray *formFields = [self getFieldComponents];
-    NSArray *formFields = [JsonToObjectMapper getFieldsFromJsonString:@""];
+    NSArray *formFields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
     CGRect frame = CGRectMake(10, 100, 0, 0);
     for (FieldComponent *field in formFields) {
         LabelFieldComponent *labelComponent = [[XMLMapper objectForTag:@"label"] copy];
@@ -54,7 +51,7 @@ typedef enum  {
         inputComponent.options = field.options;
         inputComponent.placeholder = field.placeholder;
         field.inputComponent = inputComponent;
-        frame = [self addViewOfComponent:field toMainView:formView withFrame:frame];
+        frame = [self addViewOfComponent:field toMainView:formView withFrame:frame usingLayoutType:layoutType];
     }
     [formView sizeToFit];
     return formView;
@@ -67,7 +64,7 @@ typedef enum  {
             requiredFrame = CGRectMake(frame.origin.x, frame.origin.y + size.height, 0, 0);
             break;
         case HORIZONTAL:
-            requiredFrame = CGRectMake(frame.origin.x + size.width, frame.origin.y, size.width, size.height);
+            requiredFrame = CGRectMake(frame.origin.x + size.width, frame.origin.y, 0, 0);
             break;
         default:
             requiredFrame = frame;
@@ -76,13 +73,13 @@ typedef enum  {
     return requiredFrame;
 }
 
-- (CGRect)addViewOfComponent:(FieldComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame {
+- (CGRect)addViewOfComponent:(FieldComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame usingLayoutType:(LayoutType)layoutType{
     FieldView *componentView = (FieldView *)[component renderView];
     [componentView setFrame:frame];
     [component applyData];
     [componentView sizeToFit];
     [view addSubview:componentView];
-    return [self makeFrameForSize:componentView.frame.size withLayoutType:VERTICAL andRenderedFrame:frame];
+    return [self makeFrameForSize:componentView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
 }
 
 - (NSArray *)getFieldComponents {

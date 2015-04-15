@@ -11,6 +11,9 @@
 #import "LabelFieldComponent.h"
 #import "TextFieldComponent.h"
 #import "DatePickerComponent.h"
+#import "FormComponent.h"
+#import "ViewComponent.h"
+#import "SubViewComponent.h"
 
 @interface XMLMapper()
 @end
@@ -27,6 +30,9 @@ static  NSDictionary* dictionary;
     [mutableDictionary setValue:[LabelFieldComponent new] forKey:@"label"];
     [mutableDictionary setValue:[ButtonFieldComponent new] forKey:@"button"];
     [mutableDictionary setValue:[DatePickerComponent new] forKey:@"datePicker"];
+    [mutableDictionary setValue:[FormComponent new] forKey:@"form"];
+    [mutableDictionary setValue:[ViewComponent new] forKey:@"view"];
+    [mutableDictionary setValue:[SubViewComponent new] forKey:@"subview"];
     dictionary = mutableDictionary;
 }
 
