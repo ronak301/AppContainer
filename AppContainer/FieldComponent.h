@@ -15,9 +15,9 @@
 @property (nonatomic) NSString* type;
 @property (nonatomic) BOOL isMandatory;
 @property (nonatomic) NSString* placeholder;
-@property (nonatomic) NSArray* options;
+@property (nonatomic) NSArray<Optional>* options;
 @property (nonatomic) NSString* label;
 
-@property (nonatomic) LabelFieldComponent *labelComponent;
-@property (nonatomic) InputFieldComponent *inputComponent;
+@property (nonatomic) LabelFieldComponent<Optional> *labelComponent;
+@property (nonatomic) InputFieldComponent<Optional> *inputComponent;
 @end

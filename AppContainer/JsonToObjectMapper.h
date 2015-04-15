@@ -12,6 +12,5 @@
 
 @interface JsonToObjectMapper : NSObject
 
-- (void)jsonToClassWithJsonString :(NSString *)string;
-
++ (NSArray *)getFieldsFromJsonString:(NSString *)string;
 @end

@@ -10,7 +10,7 @@
 #import "FieldView.h"
 
 @interface FieldComponent()
-@property FieldView* fieldView;
+@property FieldView<Optional>* fieldView;
 @end
 
 @implementation FieldComponent

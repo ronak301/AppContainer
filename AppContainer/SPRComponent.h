@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "PropertyMapper.h"
 #import "SPRComponentProtocol.h"
+#import <JSONModel/JSONModel.h>
 
-@interface SPRComponent : NSObject<SPRComponentProtocol, PropertyMapper, NSCopying>
+@interface SPRComponent : JSONModel<SPRComponentProtocol, PropertyMapper, NSCopying>
 
 @end

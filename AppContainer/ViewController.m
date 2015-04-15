@@ -14,6 +14,17 @@
 @end
 
 @implementation ViewController
+/**
+ <view layout=1>
+ 
+ <form id="" data=form.xml></form>
+ <view layout = 0>
+ <button id=, label=/>
+  <button id=, label=/>
+ 
+ </view>
+ </view>
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];

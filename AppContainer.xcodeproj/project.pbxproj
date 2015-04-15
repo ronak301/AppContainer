@@ -78,10 +78,10 @@
 		4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldComponent.m; sourceTree = "<group>"; };
 		4FEA93E41ADE950D000694F3 /* FieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldView.h; sourceTree = "<group>"; };
 		4FEA93E51ADE950D000694F3 /* FieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldView.m; sourceTree = "<group>"; };
-		BDBCE3931ADEB0B700D7ECF7 /* JsonToObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonToObjectMapper.h; sourceTree = "<group>"; };
-		BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonToObjectMapper.m; sourceTree = "<group>"; };
 		4FEA93ED1ADEB11F000694F3 /* DatePickerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerComponent.h; sourceTree = "<group>"; };
 		4FEA93EE1ADEB11F000694F3 /* DatePickerComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerComponent.m; sourceTree = "<group>"; };
+		BDBCE3931ADEB0B700D7ECF7 /* JsonToObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonToObjectMapper.h; sourceTree = "<group>"; };
+		BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonToObjectMapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
