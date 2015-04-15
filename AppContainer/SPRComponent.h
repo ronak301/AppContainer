@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mapper.h"
+#import "SPRComponentProtocol.h"
 
-@interface SPRComponent : NSObject
+@interface SPRComponent : NSObject<SPRComponentProtocol, Mapper, NSCopying>
 
 @end

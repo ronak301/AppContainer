@@ -23,10 +23,16 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [mainView addSubview:button];
-    return mainView;
+    return button;
 }
 
 - (void)buttonTapped:(id) sender {
     
+}
+
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] init];
 }
 @end

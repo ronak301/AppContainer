@@ -7,9 +7,9 @@
 //
 
 #import "FieldComponent.h"
-
-@interface LabelFieldComponent : FieldComponent
-
+#import "Mapper.h"
+@interface LabelFieldComponent : FieldComponent<Mapper> 
+    
 @property (nonatomic) NSString* labelName;
 
 @end

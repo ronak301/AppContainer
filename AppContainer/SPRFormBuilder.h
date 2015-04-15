@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface SPRFormBuilder : NSObject
 
 @property (nonatomic) NSString* formXML;
 
+- (UIView *)buildFormUsingData:(NSDictionary *)formData;
 
 @end

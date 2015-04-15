@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "SPRComponent.h"
 #import "SPRComponentProtocol.h"
-
-@interface FieldComponent: SPRComponent<SPRComponentProtocol>
+#import "Mapper.h"
+@interface FieldComponent: SPRComponent<SPRComponentProtocol, Mapper>
 
 @property (nonatomic) NSInteger fieldId;
 @property (nonatomic) NSString* type;
 @property (nonatomic) BOOL isMandatory;
+
+
++ (NSDictionary *)getPropertyMapper;
 
 @end

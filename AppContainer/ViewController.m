@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SPRFormBuilder.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.view addSubview:[[SPRFormBuilder new] buildFormUsingData:nil]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

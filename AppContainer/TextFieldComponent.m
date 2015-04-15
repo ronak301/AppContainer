@@ -19,9 +19,15 @@
 }
 
 + (UIView *)renderViewForComponent:(SPRComponent *)component {
-    UIView *mainView = [UIView new];
+//    UIView *mainView = [UIView new];
     UITextField *textField = [UITextField new];
-    [mainView addSubview:textField];
-    return mainView;
+//    [mainView addSubview:textField];
+    return textField;
+}
+
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] init];
 }
 @end

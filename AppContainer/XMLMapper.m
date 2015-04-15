@@ -21,13 +21,17 @@ static  NSDictionary* dictionary;
 
 + (void)initialize {
     NSMutableDictionary* mutableDictionary = [NSMutableDictionary new];
-    [mutableDictionary setValue:[TextFieldComponent class] forKey:@"textField"];
-    [mutableDictionary setValue:[LabelFieldComponent class] forKey:@"labelField"];
-    [mutableDictionary setValue:[ButtonFieldComponent class] forKey:@"buttonField"];
+    [mutableDictionary setValue:[TextFieldComponent new] forKey:@"textField"];
+    [mutableDictionary setValue:[LabelFieldComponent new] forKey:@"labelField"];
+    [mutableDictionary setValue:[ButtonFieldComponent new] forKey:@"buttonField"];
     dictionary = mutableDictionary;
 }
 
-+ (Class)classForTag:(NSString *)tag {
++ (NSDictionary *)dictinaroy {
+    return dictionary;
+}
+
++ (id)objectForTag:(NSString *)tag {
     return [dictionary valueForKey:tag];
 }
 

@@ -1,5 +1,5 @@
 //
-//  XMLMapper.h
+//  Mapper.h
 //  AppContainer
 //
 //  Created by Urvashi Gupta on 14/04/15.
@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SPRComponent.h"
 
-@interface XMLMapper : NSObject
+@protocol Mapper <NSObject>
 
-+ (SPRComponent *)objectForTag:(NSString *) tag;
+- (NSString *)getPropertyNameForTag:(NSString *)tag;
 
 @end

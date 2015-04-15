@@ -10,12 +10,42 @@
 
 @implementation FieldComponent
 
+static NSDictionary* propertyMapper = nil;
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [self createPropertyMapper];
+    }
+    return self;
+}
 + (FieldComponent *)createComponentWithData:(NSDictionary *)dictionary {
     return [FieldComponent new];
 }
 
-+ (UIView *)renderViewForComponent:(SPRComponent *)component {
+- (UIView *)renderView {
     return [UIView new];
 }
 
+#pragma mark - Mapper
+
+- (NSString *)getPropertyNameForTag:(NSString *)tag {
+    if (propertyMapper == nil) {
+        [self createPropertyMapper];
+    }
+    return [propertyMapper valueForKey:tag];
+}
+
+- (void)createPropertyMapper {
+    propertyMapper = @{@"fieldId":@"FieldId", @"type":@"Type", @"isMandatory":@"IsMandatory"};
+}
+
++ (NSDictionary *)getPropertyMapper {
+    return propertyMapper;
+}
+
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] init];
+}
 @end

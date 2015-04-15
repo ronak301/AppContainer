@@ -14,6 +14,8 @@
 @protocol SPRComponentProtocol <NSObject>
 
 + (SPRComponent *)createComponentWithData: (NSDictionary *)dictionary;
-+ (UIView *)renderViewForComponent: (SPRComponent *)component;
+- (UIView *)renderView;
++ (NSArray *)createStyleInvocationsFromStyleSheet:(NSDictionary *)styleData;
+- (void)applyData;
 
 @end
