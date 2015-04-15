@@ -25,6 +25,7 @@
 		4FEA93E31ADE8B1E000694F3 /* FieldComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */; };
 		4FEA93E61ADE950D000694F3 /* FieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEA93E51ADE950D000694F3 /* FieldView.m */; };
 		5959EE6E785F6BCF02FF8AB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C3763214EF424A0BD9588C /* libPods.a */; };
+		BDBCE3951ADEB0B700D7ECF7 /* JsonToObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		4FEA93E21ADE8B1E000694F3 /* FieldComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldComponent.m; sourceTree = "<group>"; };
 		4FEA93E41ADE950D000694F3 /* FieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldView.h; sourceTree = "<group>"; };
 		4FEA93E51ADE950D000694F3 /* FieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldView.m; sourceTree = "<group>"; };
+		BDBCE3931ADEB0B700D7ECF7 /* JsonToObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonToObjectMapper.h; sourceTree = "<group>"; };
+		BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonToObjectMapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 			children = (
 				4F9AA9441ADC34E5004438EC /* Info.plist */,
 				4F9AA9451ADC34E5004438EC /* main.m */,
+				BDBCE3931ADEB0B700D7ECF7 /* JsonToObjectMapper.h */,
+				BDBCE3941ADEB0B700D7ECF7 /* JsonToObjectMapper.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				4F9AA96E1ADC3742004438EC /* SPRComponent.m in Sources */,
 				4F9AA9711ADC3914004438EC /* InputFieldComponent.m in Sources */,
 				4F9AA94C1ADC34E5004438EC /* ViewController.m in Sources */,
+				BDBCE3951ADEB0B700D7ECF7 /* JsonToObjectMapper.m in Sources */,
 				4F9AA9491ADC34E5004438EC /* AppDelegate.m in Sources */,
 				4F9AA9461ADC34E5004438EC /* main.m in Sources */,
 				4F9AA9781ADC425D004438EC /* LabelFieldComponent.m in Sources */,
