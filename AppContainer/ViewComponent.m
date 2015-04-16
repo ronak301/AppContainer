@@ -8,6 +8,12 @@
 
 #import "ViewComponent.h"
 #import "SPRViewBuilder.h"
+#import "View.h"
+#import "ColorUtils.h"
+
+@interface ViewComponent ()
+@property (nonatomic) View* view;
+@end
 
 @implementation ViewComponent
 
@@ -18,7 +24,22 @@
 #pragma mark - SPRComponentProtocol
 
 - (UIView *)renderView {
-    return [[self getComponentViewBuilder] buildComponentViewFromComponent:self];
+    _view = (View *)[[self getComponentViewBuilder] buildComponentViewFromComponent:self];
+    return _view;
+}
+
+#pragma mark -
+
+- (void)applyStyleFromStyleModel:(StyleModel *)styleModel {
+    for (SubViewComponent* component in self.forms) {
+        [component applyStyleFromStyleModel:(component.style ? component.style : styleModel)];
+    }
+    for (SubViewComponent* component in self.views) {
+        [component applyStyleFromStyleModel:(component.style ? component.style : styleModel)];
+    }
+    for (SubViewComponent* component in self.buttons) {
+        [component applyStyleFromStyleModel:(component.style ? component.style : styleModel)];
+    }
 }
 
 @end

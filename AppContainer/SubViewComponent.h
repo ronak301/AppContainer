@@ -8,11 +8,12 @@
 
 #import "SPRComponent.h"
 #import "SPRBuilderProtocol.h"
+#import "StyleModel.h"
 
 @interface SubViewComponent : SPRComponent
 
 @property (nonatomic) NSNumber* layout;
-@property (nonatomic) NSString* style;
+@property (nonatomic) StyleModel* style;
 - (NSObject<SPRBuilderProtocol> *)getComponentViewBuilder;
 
 @end

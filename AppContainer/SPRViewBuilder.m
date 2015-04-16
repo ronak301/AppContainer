@@ -25,6 +25,10 @@
         }
         UIView* addedView = [self addViewOfComponent:formComponent toMainView:mainView withFrame:frame];
         frame = [self getUpdatedFrameToIncludeSize:addedView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
+        if (!formComponent.style) {
+            formComponent.style = component.style;
+        }
+        [formComponent applyStyleFromStyleModel:formComponent.style];
     }
     for (SubViewComponent *viewComponent in component.views) {
         if (!viewComponent.layout) {
@@ -32,6 +36,10 @@
         }
         UIView* addedView = [self addViewOfComponent:viewComponent toMainView:mainView withFrame:frame];
         frame = [self getUpdatedFrameToIncludeSize:addedView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
+        if (!viewComponent.style) {
+            viewComponent.style = component.style;
+        }
+        [viewComponent applyStyleFromStyleModel:viewComponent.style];
     }
     for (SubViewComponent *buttonComponent in component.buttons) {
         if (!buttonComponent.layout) {
@@ -39,6 +47,10 @@
         }
         UIView* addedView = [self addViewOfComponent:buttonComponent toMainView:mainView withFrame:frame];
         frame = [self getUpdatedFrameToIncludeSize:addedView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
+        if (!buttonComponent.style) {
+            buttonComponent.style = component.style;
+        }
+        [buttonComponent applyStyleFromStyleModel:buttonComponent.style];
     }
     [mainView sizeToFit];
     mainView.layer.borderColor = [[UIColor blackColor] CGColor];

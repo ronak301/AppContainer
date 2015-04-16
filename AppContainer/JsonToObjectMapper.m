@@ -40,7 +40,7 @@
 }
 
 + (NSDictionary *)getStyleDictionaryFromJsonString:(NSString *)string {
-    NSDictionary* containerStyleDictionary = @{ @"systemFontOfSize" : @"17.0", @"setBackgroundColor" : @"gray", @"setTextColor" : @"black", @"alpha" : @"1.0"};
+    NSDictionary* containerStyleDictionary = @{ @"fontSize" : @"17.0", @"backgroundColor" : @"yellow", @"textColor" : @"black", @"alpha" : @"1.0"};
     return containerStyleDictionary;
 }
 

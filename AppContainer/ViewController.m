@@ -53,6 +53,9 @@
     button2.buttonId = @1;
     button2.label = @"Cancel";
     subViewComponent.buttons = @[button1, button2];
+    StyleModel* styleModell = [StyleModel new];
+    styleModell.backgroundColor = @"yellow";
+    subViewComponent.style = styleModell;
     
     ViewComponent *mainViewComponent = [ViewComponent new];
     mainViewComponent.layout = @1;
@@ -61,7 +64,12 @@
     form.fields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
     mainViewComponent.forms = @[form];
     mainViewComponent.views = @[subViewComponent];
-    
+    StyleModel* styleModel = [StyleModel new];
+    styleModel.backgroundColor = @"gray";
+    styleModel.alpha = @"1.0";
+    styleModel.textColor = @"red";
+    styleModel.fontSize = @"10.0";
+    mainViewComponent.style = styleModel;
     UIView* appView = [[SPRViewBuilder new] buildComponentViewFromComponent:mainViewComponent];
     scrollView.contentSize=appView.frame.size;
     scrollView.contentOffset = CGPointMake(-10, -50);

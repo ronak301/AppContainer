@@ -29,7 +29,7 @@
     return nil;
 }
 
-- (UIView *)buildComponentViewFromComponent:(SubViewComponent *)component {
+- (UIView *)buildComponentViewFromComponent:(FormComponent *)component {
     LayoutType layoutType = (LayoutType)[component.layout intValue];
     
     NSDictionary *dictionary = @{@"UIView":@{@"layoutType": @"", @"style":@"", @"components": @[@{@"type": @"labelField", @"labelName": @"This is a label"}, @{@"type": @"labelField", @"labelName": @"This is a label again"}]}};
@@ -43,6 +43,7 @@
     
 //    NSArray *formFields = [self getFieldComponents];
     NSArray *formFields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
+    component.fields = formFields;
     CGRect frame = CGRectMake(0, 0, 0, 0);
     for (FieldComponent *field in formFields) {
         LabelFieldComponent *labelComponent = [[XMLMapper objectForTag:@"label"] copy];

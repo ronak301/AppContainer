@@ -18,4 +18,12 @@
     return self;
 }
 
+- (NSObject<SPRBuilderProtocol> *)getComponentViewBuilder {
+    //Override in subclass
+    return nil;
+}
+
+- (void)applyStyleFromStyleModel:(StyleModel *)styleModel {
+    //Override in subclass
+}
 @end

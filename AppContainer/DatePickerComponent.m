@@ -33,4 +33,10 @@
     return [[[self class] alloc] init];
 }
 
+#pragma mark -
+
+- (BOOL)hasFontProperty {
+    return NO;
+}
+
 @end

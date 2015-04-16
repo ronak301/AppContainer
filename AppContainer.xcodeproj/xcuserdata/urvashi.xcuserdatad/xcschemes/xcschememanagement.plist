@@ -9,9 +9,44 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ColorUtils.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4F0C192A1ADFE36800E6F1DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F0C19341ADFE36800E6F1DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F0C19521ADFE47B00E6F1DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F0C195C1ADFE47B00E6F1DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F0C197A1ADFEC3D00E6F1DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F0C19841ADFEC3D00E6F1DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4F9AA93F1ADC34E5004438EC</key>
 		<dict>
 			<key>primary</key>

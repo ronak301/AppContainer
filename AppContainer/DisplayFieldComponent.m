@@ -10,4 +10,20 @@
 
 @implementation DisplayFieldComponent
 
+#pragma mark -
+
+- (BOOL)hasFontProperty {
+    //Override in subclass
+    return YES;
+}
+
+- (void)setFont:(UIFont *)font {
+    //Override in subclass
+    return;
+}
+
+- (void)setFontColor:(UIColor *)textColor {
+    //Override in subclass
+}
+
 @end

@@ -34,4 +34,18 @@
 - (id)copyWithZone:(NSZone *)zone {
     return [[[self class] alloc] init];
 }
+
+#pragma mark -
+
+- (BOOL)hasFontProperty {
+    return YES;
+}
+
+- (void)setFont:(UIFont *)font {
+    self.textField.font = font;
+}
+
+- (void)setFontColor:(UIColor *)textColor {
+    self.textField.textColor = textColor;
+}
 @end

@@ -80,4 +80,18 @@ static NSDictionary* propertyMapper = nil;
 - (id)copyWithZone:(NSZone *)zone {
     return [[[self class] alloc] init];
 }
+
+#pragma mark -
+
+- (BOOL)hasFontProperty {
+    return YES;
+}
+
+- (void)setFont:(UIFont *)font {
+    self.nameLabel.font = font;
+}
+
+- (void)setFontColor:(UIColor *)textColor {
+    self.nameLabel.textColor = textColor;
+}
 @end

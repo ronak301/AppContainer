@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4F0C19241ADFCDC300E6F1DA /* StyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C19231ADFCDC300E6F1DA /* StyleModel.m */; };
+		4F0C19801ADFEC3D00E6F1DA /* ColorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F0C197F1ADFEC3D00E6F1DA /* ColorUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F0C19861ADFEC3D00E6F1DA /* ColorUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0C197B1ADFEC3D00E6F1DA /* ColorUtils.framework */; };
+		4F0C19921ADFEC3D00E6F1DA /* ColorUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0C197B1ADFEC3D00E6F1DA /* ColorUtils.framework */; };
+		4F0C19931ADFEC3D00E6F1DA /* ColorUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0C197B1ADFEC3D00E6F1DA /* ColorUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F3626A51ADFF177002DD9B2 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3626A41ADFF177002DD9B2 /* ColorUtils.m */; };
 		4F9AA9461ADC34E5004438EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9451ADC34E5004438EC /* main.m */; };
 		4F9AA9491ADC34E5004438EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA9481ADC34E5004438EC /* AppDelegate.m */; };
 		4F9AA94C1ADC34E5004438EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AA94B1ADC34E5004438EC /* ViewController.m */; };
@@ -37,6 +42,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4F0C19871ADFEC3D00E6F1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F9AA9381ADC34E5004438EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0C197A1ADFEC3D00E6F1DA;
+			remoteInfo = ColorUtils;
+		};
+		4F0C19891ADFEC3D00E6F1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F9AA9381ADC34E5004438EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F9AA93F1ADC34E5004438EC;
+			remoteInfo = AppContainer;
+		};
+		4F0C19901ADFEC3D00E6F1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F9AA9381ADC34E5004438EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0C197A1ADFEC3D00E6F1DA;
+			remoteInfo = ColorUtils;
+		};
 		4F9AA95A1ADC34E5004438EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4F9AA9381ADC34E5004438EC /* Project object */;
@@ -46,12 +72,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4F0C19471ADFE36800E6F1DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4F0C19931ADFEC3D00E6F1DA /* ColorUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		24C3763214EF424A0BD9588C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E4659092B82FDF263E6621 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3D759B72157F0A8DC038497C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0C19221ADFCDC300E6F1DA /* StyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleModel.h; sourceTree = "<group>"; };
 		4F0C19231ADFCDC300E6F1DA /* StyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleModel.m; sourceTree = "<group>"; };
+		4F0C197B1ADFEC3D00E6F1DA /* ColorUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ColorUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0C197E1ADFEC3D00E6F1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0C197F1ADFEC3D00E6F1DA /* ColorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorUtils.h; sourceTree = "<group>"; };
+		4F0C19851ADFEC3D00E6F1DA /* ColorUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3626A41ADFF177002DD9B2 /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtils.m; sourceTree = "<group>"; };
 		4F39E9471ADD8ADF00F8136E /* PropertyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyMapper.h; sourceTree = "<group>"; };
 		4F9AA9401ADC34E5004438EC /* AppContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9AA9441ADC34E5004438EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,10 +153,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F0C19771ADFEC3D00E6F1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0C19821ADFEC3D00E6F1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0C19861ADFEC3D00E6F1DA /* ColorUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F9AA93D1ADC34E5004438EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0C19921ADFEC3D00E6F1DA /* ColorUtils.framework in Frameworks */,
 				5959EE6E785F6BCF02FF8AB2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,11 +198,30 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		4F0C197C1ADFEC3D00E6F1DA /* ColorUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4F3626A41ADFF177002DD9B2 /* ColorUtils.m */,
+				4F0C197F1ADFEC3D00E6F1DA /* ColorUtils.h */,
+				4F0C197D1ADFEC3D00E6F1DA /* Supporting Files */,
+			);
+			path = ColorUtils;
+			sourceTree = "<group>";
+		};
+		4F0C197D1ADFEC3D00E6F1DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F0C197E1ADFEC3D00E6F1DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4F9AA9371ADC34E5004438EC = {
 			isa = PBXGroup;
 			children = (
 				4F9AA9421ADC34E5004438EC /* AppContainer */,
 				4F9AA95C1ADC34E5004438EC /* AppContainerTests */,
+				4F0C197C1ADFEC3D00E6F1DA /* ColorUtils */,
 				4F9AA9411ADC34E5004438EC /* Products */,
 				F009400DA296704AC482E0DF /* Pods */,
 				AFF08AB60B94202F8323384E /* Frameworks */,
@@ -153,6 +233,8 @@
 			children = (
 				4F9AA9401ADC34E5004438EC /* AppContainer.app */,
 				4F9AA9591ADC34E5004438EC /* AppContainerTests.xctest */,
+				4F0C197B1ADFEC3D00E6F1DA /* ColorUtils.framework */,
+				4F0C19851ADFEC3D00E6F1DA /* ColorUtilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,7 +362,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4F0C19781ADFEC3D00E6F1DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0C19801ADFEC3D00E6F1DA /* ColorUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		4F0C197A1ADFEC3D00E6F1DA /* ColorUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0C19941ADFEC3D00E6F1DA /* Build configuration list for PBXNativeTarget "ColorUtils" */;
+			buildPhases = (
+				4F0C19761ADFEC3D00E6F1DA /* Sources */,
+				4F0C19771ADFEC3D00E6F1DA /* Frameworks */,
+				4F0C19781ADFEC3D00E6F1DA /* Headers */,
+				4F0C19791ADFEC3D00E6F1DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorUtils;
+			productName = ColorUtils;
+			productReference = 4F0C197B1ADFEC3D00E6F1DA /* ColorUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4F0C19841ADFEC3D00E6F1DA /* ColorUtilsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0C19971ADFEC3D00E6F1DA /* Build configuration list for PBXNativeTarget "ColorUtilsTests" */;
+			buildPhases = (
+				4F0C19811ADFEC3D00E6F1DA /* Sources */,
+				4F0C19821ADFEC3D00E6F1DA /* Frameworks */,
+				4F0C19831ADFEC3D00E6F1DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F0C19881ADFEC3D00E6F1DA /* PBXTargetDependency */,
+				4F0C198A1ADFEC3D00E6F1DA /* PBXTargetDependency */,
+			);
+			name = ColorUtilsTests;
+			productName = ColorUtilsTests;
+			productReference = 4F0C19851ADFEC3D00E6F1DA /* ColorUtilsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4F9AA93F1ADC34E5004438EC /* AppContainer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F9AA9631ADC34E5004438EC /* Build configuration list for PBXNativeTarget "AppContainer" */;
@@ -290,10 +420,12 @@
 				4F9AA93D1ADC34E5004438EC /* Frameworks */,
 				4F9AA93E1ADC34E5004438EC /* Resources */,
 				AF76DBD90C09B22217190469 /* Copy Pods Resources */,
+				4F0C19471ADFE36800E6F1DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4F0C19911ADFEC3D00E6F1DA /* PBXTargetDependency */,
 			);
 			name = AppContainer;
 			productName = AppContainer;
@@ -327,6 +459,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Urvashi Gupta";
 				TargetAttributes = {
+					4F0C197A1ADFEC3D00E6F1DA = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					4F0C19841ADFEC3D00E6F1DA = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 4F9AA93F1ADC34E5004438EC;
+					};
 					4F9AA93F1ADC34E5004438EC = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -351,11 +490,27 @@
 			targets = (
 				4F9AA93F1ADC34E5004438EC /* AppContainer */,
 				4F9AA9581ADC34E5004438EC /* AppContainerTests */,
+				4F0C197A1ADFEC3D00E6F1DA /* ColorUtils */,
+				4F0C19841ADFEC3D00E6F1DA /* ColorUtilsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F0C19791ADFEC3D00E6F1DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0C19831ADFEC3D00E6F1DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F9AA93E1ADC34E5004438EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +564,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F0C19761ADFEC3D00E6F1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3626A51ADFF177002DD9B2 /* ColorUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F0C19811ADFEC3D00E6F1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F9AA93C1ADC34E5004438EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +619,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4F0C19881ADFEC3D00E6F1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0C197A1ADFEC3D00E6F1DA /* ColorUtils */;
+			targetProxy = 4F0C19871ADFEC3D00E6F1DA /* PBXContainerItemProxy */;
+		};
+		4F0C198A1ADFEC3D00E6F1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F9AA93F1ADC34E5004438EC /* AppContainer */;
+			targetProxy = 4F0C19891ADFEC3D00E6F1DA /* PBXContainerItemProxy */;
+		};
+		4F0C19911ADFEC3D00E6F1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0C197A1ADFEC3D00E6F1DA /* ColorUtils */;
+			targetProxy = 4F0C19901ADFEC3D00E6F1DA /* PBXContainerItemProxy */;
+		};
 		4F9AA95B1ADC34E5004438EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4F9AA93F1ADC34E5004438EC /* AppContainer */;
@@ -476,6 +661,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4F0C19951ADFEC3D00E6F1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ColorUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4F0C19961ADFEC3D00E6F1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ColorUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4F0C19981ADFEC3D00E6F1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ColorUtilsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppContainer.app/AppContainer";
+			};
+			name = Debug;
+		};
+		4F0C19991ADFEC3D00E6F1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ColorUtilsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppContainer.app/AppContainer";
+			};
+			name = Release;
+		};
 		4F9AA9611ADC34E5004438EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,6 +874,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F0C19941ADFEC3D00E6F1DA /* Build configuration list for PBXNativeTarget "ColorUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0C19951ADFEC3D00E6F1DA /* Debug */,
+				4F0C19961ADFEC3D00E6F1DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0C19971ADFEC3D00E6F1DA /* Build configuration list for PBXNativeTarget "ColorUtilsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0C19981ADFEC3D00E6F1DA /* Debug */,
+				4F0C19991ADFEC3D00E6F1DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4F9AA93B1ADC34E5004438EC /* Build configuration list for PBXProject "AppContainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

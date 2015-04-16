@@ -51,4 +51,21 @@ static NSDictionary* propertyMapper = nil;
 - (id)copyWithZone:(NSZone *)zone {
     return [[[self class] alloc] init];
 }
+
+#pragma mark -
+
+- (BOOL)hasFontProperty {
+    //Override in subclass
+    return NO;
+}
+
+- (void)setFont:(UIFont *)font {
+    //Override in subclass
+    return;
+}
+
+- (void)setFontColor:(UIColor *)textColor {
+    //Override in subclass
+}
+
 @end

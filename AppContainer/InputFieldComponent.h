@@ -15,4 +15,8 @@
 @property (nonatomic) NSString* placeholder;
 @property (nonatomic) NSArray* options;
 
+- (BOOL)hasFontProperty;
+- (void)setFontColor:(UIColor *)textColor;
+- (void)setFont:(UIFont *)font;
+
 @end

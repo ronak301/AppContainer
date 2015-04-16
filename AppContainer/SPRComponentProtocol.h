@@ -10,12 +10,13 @@
 #import <UIKit/UIKit.h>
 
 @class SPRComponent;
+@class StyleModel;
 
 @protocol SPRComponentProtocol <NSObject>
 
 + (SPRComponent *)createComponentWithData: (NSDictionary *)dictionary;
+- (void)applyStyleFromStyleModel:(StyleModel *)styleModel;
 - (UIView *)renderView;
-+ (NSArray *)createStyleInvocationsFromStyleSheet:(NSDictionary *)styleData;
 - (void)applyData;
 
 @end

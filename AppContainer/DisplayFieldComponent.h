@@ -10,4 +10,8 @@
 
 @interface DisplayFieldComponent : SPRComponent
 
+- (BOOL)hasFontProperty;
+- (void)setFontColor:(UIColor *)textColor;
+- (void)setFont:(UIFont *)font;
+
 @end
