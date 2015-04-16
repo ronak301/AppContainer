@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "AppConstants.h"
 
+@class SubViewComponent;
+
 @protocol SPRBuilderProtocol <NSObject>
 
-- (UIView *)buildComponentViewUsingData:(NSString *)data withLayoutType:(LayoutType)layoutType;
+@optional
+- (UIView *)buildComponentViewFromComponent:(SubViewComponent *)component withLayoutType:(LayoutType)layoutType;
+- (UIView *)buildComponentViewFromComponent:(SubViewComponent *)component;
 
 @end

@@ -29,12 +29,13 @@
     return nil;
 }
 
-- (UIView *)buildComponentViewUsingData:(NSString *)formData withLayoutType:(LayoutType)layoutType {
+- (UIView *)buildComponentViewFromComponent:(SubViewComponent *)component {
+    LayoutType layoutType = (LayoutType)[component.layout intValue];
     
     NSDictionary *dictionary = @{@"UIView":@{@"layoutType": @"", @"style":@"", @"components": @[@{@"type": @"labelField", @"labelName": @"This is a label"}, @{@"type": @"labelField", @"labelName": @"This is a label again"}]}};
     
 //    FormView *formView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, CGFLOAT_MAX)];
-    FormView *formView = [[FormView alloc] initWithLayoutType:VERTICAL];
+    FormView *formView = [[FormView alloc] initWithLayoutType:layoutType];
     //Read & store type of layout
     
     //Read & create style dictionary
@@ -42,7 +43,7 @@
     NSDictionary* containerStyleDictionary = @{ @"systemFontOfSize" : @"17.0", @"setBackgroundColor" : @"gray", @"setTextColor" : @"black", @"alpha" : @"1.0"};
 //    NSArray *formFields = [self getFieldComponents];
     NSArray *formFields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
-    CGRect frame = CGRectMake(10, 100, 0, 0);
+    CGRect frame = CGRectMake(0, 0, 0, 0);
     for (FieldComponent *field in formFields) {
         LabelFieldComponent *labelComponent = [[XMLMapper objectForTag:@"label"] copy];
         [labelComponent setLabelName:field.label];

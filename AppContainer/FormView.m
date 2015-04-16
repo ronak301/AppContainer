@@ -29,7 +29,7 @@
             width += subView.frame.size.width;
         }
     
-        return CGSizeMake(height, width);
+        return CGSizeMake(width, height);
     } else if (self.layoutType == VERTICAL) {
         CGFloat width = 0;
         CGFloat height = 0;
@@ -37,7 +37,7 @@
             width = MAX(width, subView.frame.size.width);
             height += subView.frame.size.height;
         }
-        return CGSizeMake(height, width);
+        return CGSizeMake(width, height);
     }
     return CGSizeZero;
 }

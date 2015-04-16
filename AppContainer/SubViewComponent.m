@@ -10,4 +10,12 @@
 
 @implementation SubViewComponent
 
+- (instancetype)init {
+    if (self = [super init]) {
+        //Default vertical layout
+        self.layout = @1;
+    }
+    return self;
+}
+
 @end

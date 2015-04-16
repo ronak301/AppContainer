@@ -15,6 +15,6 @@
 @interface FormComponent : SubViewComponent
 
 @property (nonatomic) NSNumber* formId;
-@property (nonatomic) NSArray<FieldComponent>* fields;
+@property (nonatomic) NSArray* fields;
 
 @end

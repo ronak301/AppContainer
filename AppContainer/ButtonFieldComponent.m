@@ -18,16 +18,16 @@
     return [ButtonFieldComponent new];
 }
 
-- (UIView *)renderViewForComponent {
-    UIView *mainView = [UIView new];
+- (UIView *)renderView {
     self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [mainView addSubview:self.button];
+    self.button.frame = CGRectMake(0, 0, 80, 40);
+    [self applyData];
     return self.button;
 }
 
 - (void)applyData {
-    self.button.titleLabel.text = self.label;
+    [self.button setTitle:self.label forState:UIControlStateNormal];
 }
 
 - (void)buttonTapped:(id) sender {

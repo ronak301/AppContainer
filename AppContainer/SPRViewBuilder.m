@@ -14,34 +14,29 @@
 
 @implementation SPRViewBuilder
 
-- (UIView *)buildComponentViewUsingData:(NSString *)data withLayoutType:(LayoutType)layoutType {
-    ViewComponent *mainViewComponent = [JsonToObjectMapper getViewFromJsonString:@""];
-    CGRect frame = CGRectMake(10, 100, 0, 0);
-    View* mainView = [[View alloc] initWithLayoutType:(LayoutType)[mainViewComponent.layout intValue]];
+- (UIView *)buildComponentViewFromComponent:(ViewComponent *)component {
+    LayoutType layoutType = (LayoutType)[component.layout intValue];
+    CGRect frame = CGRectMake(0, 0, 0, 0);
+    View* mainView = [[View alloc] initWithLayoutType:layoutType];
     
-    for (SubViewComponent *formComponent in mainViewComponent.forms) {
+    for (SubViewComponent *formComponent in component.forms) {
         frame = [self addViewOfComponent:formComponent toMainView:mainView withFrame:frame usingLayout:layoutType];
     }
-    for (SubViewComponent *viewComponent in mainViewComponent.views) {
+    for (SubViewComponent *viewComponent in component.views) {
         frame = [self addViewOfComponent:viewComponent toMainView:mainView withFrame:frame usingLayout:layoutType];
     }
-    for (SubViewComponent *buttonComponent in mainViewComponent.buttons) {
+    for (SubViewComponent *buttonComponent in component.buttons) {
         frame = [self addViewOfComponent:buttonComponent toMainView:mainView withFrame:frame usingLayout:layoutType];
     }
-//    for (NSString *key in views) {
-//        NSArray* viewComponents = views[key];
-//        for (SubViewComponent* component in viewComponents) {
-//            frame = [self addViewOfComponent:component toMainView:mainView withFrame:frame usingLayout:layoutType];
-//        }
-//        
-//    }
     [mainView sizeToFit];
     return mainView;
 }
 
 - (CGRect)addViewOfComponent:(SubViewComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame usingLayout:(LayoutType)layoutType {
     UIView *componentView = (UIView *)[component renderView];
-    [componentView setFrame:frame];
+    [componentView setFrame:CGRectMake(frame.origin.x, frame.origin.y, componentView.frame.size.width, componentView.frame.size.height)];
+    componentView.layer.borderColor = [[UIColor blackColor] CGColor];
+    componentView.layer.borderWidth = 0.5;
     [view addSubview:componentView];
     return [self makeFrameForSize:componentView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
 }

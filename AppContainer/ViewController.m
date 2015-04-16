@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "SPRFormBuilder.h"
 #import "SPRViewBuilder.h"
+#import "ViewComponent.h"
+#import "JsonToObjectMapper.h"
+#import "ButtonFieldComponent.h"
 
 @interface ViewController ()
 
@@ -30,8 +33,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    [self.view addSubview:[[SPRFormBuilder new] buildComponentViewUsingData:nil withLayoutType:VERTICAL]];
-    [self.view addSubview:[[SPRViewBuilder new] buildComponentViewUsingData:nil withLayoutType:VERTICAL]];
+    CGRect fullScreenRect=[[UIScreen mainScreen] applicationFrame];
+    UIScrollView* scrollView=[[UIScrollView alloc] initWithFrame:fullScreenRect];
+    scrollView.backgroundColor = [UIColor whiteColor];
+    self.view = scrollView;
+    
+    ViewComponent *mainViewComponent = [ViewComponent new];
+    mainViewComponent.layout = @1;
+    FormComponent *form = [FormComponent new];
+    form.formId = @4;
+    form.fields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
+    ViewComponent* subViewComponent = [ViewComponent new];
+    subViewComponent.layout = @0;
+//    FormComponent *form_ = [FormComponent new];
+//    form_.formId = @4;
+//    form_.fields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
+//    subViewComponent.forms = @[form_];
+    ButtonFieldComponent* button1 = [ButtonFieldComponent new];
+    button1.buttonId = @1;
+    button1.label = @"Save";
+    ButtonFieldComponent* button2 = [ButtonFieldComponent new];
+    button2.buttonId = @1;
+    button2.label = @"Cancel";
+    subViewComponent.buttons = @[button1, button2];
+    mainViewComponent.forms = @[form];
+    mainViewComponent.views = @[subViewComponent];
+    
+    UIView* appView = [[SPRViewBuilder new] buildComponentViewFromComponent:mainViewComponent];
+    scrollView.contentSize=appView.frame.size;
+    scrollView.contentOffset = CGPointMake(-10, 50);
+    scrollView.contentInset = UIEdgeInsetsMake(50, 10, 50, 10);
+    [scrollView addSubview:appView];
 }
 
 - (void)didReceiveMemoryWarning {

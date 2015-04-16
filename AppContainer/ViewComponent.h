@@ -14,7 +14,7 @@
 @interface ViewComponent :SubViewComponent
 
 @property (nonatomic) NSNumber* layout;
-@property (nonatomic) NSArray<Optional, FormComponent>* forms;
+@property (nonatomic) NSArray<Optional>* forms;
 @property (nonatomic) NSArray<Optional>* views;
 @property (nonatomic) NSArray<Optional>* buttons;
 

@@ -18,7 +18,7 @@
 #pragma mark - SPRComponentProtocol
 
 - (UIView *)renderView {
-    return [[self getComponentViewBuilder] buildComponentViewUsingData:nil withLayoutType:VERTICAL];
+    return [[self getComponentViewBuilder] buildComponentViewFromComponent:self];
 }
 
 @end

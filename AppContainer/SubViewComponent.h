@@ -11,6 +11,7 @@
 
 @interface SubViewComponent : SPRComponent
 
+@property (nonatomic) NSNumber* layout;
 - (NSObject<SPRBuilderProtocol> *)getComponentViewBuilder;
 
 @end
