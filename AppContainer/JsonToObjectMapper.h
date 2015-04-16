@@ -16,4 +16,6 @@
 + (NSArray *)getFormFieldsFromJsonString:(NSString *)string;
 + (NSDictionary *)getSubViewsFromJsonString:(NSString *)string;
 + (ViewComponent *)getViewFromJsonString:(NSString *)string;
++ (NSDictionary *)getStyleDictionaryFromJsonString:(NSString *)string;
+
 @end

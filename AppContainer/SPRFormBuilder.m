@@ -40,7 +40,7 @@
     
     //Read & create style dictionary
     //Map the dictionary
-    NSDictionary* containerStyleDictionary = @{ @"systemFontOfSize" : @"17.0", @"setBackgroundColor" : @"gray", @"setTextColor" : @"black", @"alpha" : @"1.0"};
+    
 //    NSArray *formFields = [self getFieldComponents];
     NSArray *formFields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
     CGRect frame = CGRectMake(0, 0, 0, 0);

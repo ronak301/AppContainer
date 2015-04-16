@@ -10,7 +10,7 @@
 #import "SubViewComponent.h"
 #import "FormComponent.h"
 #import "JSONModel.h"
-@protocol JSONModel;
+
 @interface ViewComponent :SubViewComponent
 
 @property (nonatomic) NSNumber* layout;

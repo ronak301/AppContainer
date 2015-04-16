@@ -20,25 +20,34 @@
     View* mainView = [[View alloc] initWithLayoutType:layoutType];
     
     for (SubViewComponent *formComponent in component.forms) {
-        frame = [self addViewOfComponent:formComponent toMainView:mainView withFrame:frame usingLayout:layoutType];
+        if (!formComponent.layout) {
+            formComponent.layout = component.layout;
+        }
+        frame = [self addViewOfComponent:formComponent toMainView:mainView withFrame:frame];
     }
     for (SubViewComponent *viewComponent in component.views) {
-        frame = [self addViewOfComponent:viewComponent toMainView:mainView withFrame:frame usingLayout:layoutType];
+        if (!viewComponent.layout) {
+            viewComponent.layout = component.layout;
+        }
+        frame = [self addViewOfComponent:viewComponent toMainView:mainView withFrame:frame];
     }
     for (SubViewComponent *buttonComponent in component.buttons) {
-        frame = [self addViewOfComponent:buttonComponent toMainView:mainView withFrame:frame usingLayout:layoutType];
+        if (!buttonComponent.layout) {
+            buttonComponent.layout = component.layout;
+        }
+        frame = [self addViewOfComponent:buttonComponent toMainView:mainView withFrame:frame];
     }
     [mainView sizeToFit];
     return mainView;
 }
 
-- (CGRect)addViewOfComponent:(SubViewComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame usingLayout:(LayoutType)layoutType {
+- (CGRect)addViewOfComponent:(SubViewComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame {
     UIView *componentView = (UIView *)[component renderView];
     [componentView setFrame:CGRectMake(frame.origin.x, frame.origin.y, componentView.frame.size.width, componentView.frame.size.height)];
     componentView.layer.borderColor = [[UIColor blackColor] CGColor];
     componentView.layer.borderWidth = 0.5;
     [view addSubview:componentView];
-    return [self makeFrameForSize:componentView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
+    return [self makeFrameForSize:componentView.frame.size withLayoutType:(LayoutType)[component.layout intValue] andRenderedFrame:frame];
 }
 
 - (CGRect)makeFrameForSize:(CGSize)size withLayoutType:(LayoutType)layout andRenderedFrame:(CGRect)frame {

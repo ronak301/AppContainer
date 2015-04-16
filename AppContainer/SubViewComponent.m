@@ -13,7 +13,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         //Default vertical layout
-        self.layout = @1;
+//        self.layout = @1;
     }
     return self;
 }
