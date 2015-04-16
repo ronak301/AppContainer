@@ -38,14 +38,11 @@
     scrollView.backgroundColor = [UIColor whiteColor];
     self.view = scrollView;
     
-    ViewComponent *mainViewComponent = [ViewComponent new];
-    mainViewComponent.layout = @1;
-    FormComponent *form = [FormComponent new];
-    form.formId = @4;
-    form.fields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
+    
     ViewComponent* subViewComponent = [ViewComponent new];
     subViewComponent.layout = @0;
 //    FormComponent *form_ = [FormComponent new];
+//    form_.layout = @1;
 //    form_.formId = @4;
 //    form_.fields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
 //    subViewComponent.forms = @[form_];
@@ -56,12 +53,18 @@
     button2.buttonId = @1;
     button2.label = @"Cancel";
     subViewComponent.buttons = @[button1, button2];
+    
+    ViewComponent *mainViewComponent = [ViewComponent new];
+    mainViewComponent.layout = @1;
+    FormComponent *form = [FormComponent new];
+    form.formId = @4;
+    form.fields = [JsonToObjectMapper getFormFieldsFromJsonString:@""];
     mainViewComponent.forms = @[form];
     mainViewComponent.views = @[subViewComponent];
     
     UIView* appView = [[SPRViewBuilder new] buildComponentViewFromComponent:mainViewComponent];
     scrollView.contentSize=appView.frame.size;
-    scrollView.contentOffset = CGPointMake(-10, 50);
+    scrollView.contentOffset = CGPointMake(-10, -50);
     scrollView.contentInset = UIEdgeInsetsMake(50, 10, 50, 10);
     [scrollView addSubview:appView];
 }

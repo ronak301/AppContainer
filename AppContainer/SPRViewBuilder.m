@@ -23,34 +23,37 @@
         if (!formComponent.layout) {
             formComponent.layout = component.layout;
         }
-        frame = [self addViewOfComponent:formComponent toMainView:mainView withFrame:frame];
+        UIView* addedView = [self addViewOfComponent:formComponent toMainView:mainView withFrame:frame];
+        frame = [self getUpdatedFrameToIncludeSize:addedView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
     }
     for (SubViewComponent *viewComponent in component.views) {
         if (!viewComponent.layout) {
             viewComponent.layout = component.layout;
         }
-        frame = [self addViewOfComponent:viewComponent toMainView:mainView withFrame:frame];
+        UIView* addedView = [self addViewOfComponent:viewComponent toMainView:mainView withFrame:frame];
+        frame = [self getUpdatedFrameToIncludeSize:addedView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
     }
     for (SubViewComponent *buttonComponent in component.buttons) {
         if (!buttonComponent.layout) {
             buttonComponent.layout = component.layout;
         }
-        frame = [self addViewOfComponent:buttonComponent toMainView:mainView withFrame:frame];
+        UIView* addedView = [self addViewOfComponent:buttonComponent toMainView:mainView withFrame:frame];
+        frame = [self getUpdatedFrameToIncludeSize:addedView.frame.size withLayoutType:layoutType andRenderedFrame:frame];
     }
     [mainView sizeToFit];
+    mainView.layer.borderColor = [[UIColor blackColor] CGColor];
+    mainView.layer.borderWidth = 0.5;
     return mainView;
 }
 
-- (CGRect)addViewOfComponent:(SubViewComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame {
+- (UIView *)addViewOfComponent:(SubViewComponent *)component toMainView:(UIView *)view withFrame:(CGRect)frame {
     UIView *componentView = (UIView *)[component renderView];
     [componentView setFrame:CGRectMake(frame.origin.x, frame.origin.y, componentView.frame.size.width, componentView.frame.size.height)];
-    componentView.layer.borderColor = [[UIColor blackColor] CGColor];
-    componentView.layer.borderWidth = 0.5;
     [view addSubview:componentView];
-    return [self makeFrameForSize:componentView.frame.size withLayoutType:(LayoutType)[component.layout intValue] andRenderedFrame:frame];
+    return componentView;
 }
 
-- (CGRect)makeFrameForSize:(CGSize)size withLayoutType:(LayoutType)layout andRenderedFrame:(CGRect)frame {
+- (CGRect)getUpdatedFrameToIncludeSize:(CGSize)size withLayoutType:(LayoutType)layout andRenderedFrame:(CGRect)frame {
     CGRect requiredFrame = CGRectZero;
     switch (layout) {
         case VERTICAL:
